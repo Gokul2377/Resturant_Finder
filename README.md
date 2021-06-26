@@ -6,5 +6,6 @@ The main aim of this project is to provide a free open source information on the
 ## How to run
 
 1. Extract the node_modules.rar first.
-2. Upload the Resturant JSON file to local MongoDB
-3. Run app.js in Visualstudio Code.
+2. Upload the Resturant_JSON file to a Collection named 'Energy' to your local MongoDB
+3. Open app.js and run "npm start" in the terminal of VS Code
+4. Go to http://localhost:3000/index in your browser
