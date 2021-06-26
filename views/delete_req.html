@@ -1,0 +1,45 @@
+<style type="text/css">
+    body
+    {
+       background-image: linear-gradient(#ffd9d9, #ffe9d9, #fffbd9);
+    }
+    h3
+    {
+        font-family: Verdana, sans-serif;
+    }    
+    label
+    {
+        font-family: Helvetica, sans-serif;
+    }
+    input
+    {
+        padding: 2px;
+        margin: 2px;
+        display: flex;
+    
+    }   
+    button
+    {
+        margin: 3px;
+        padding: 5px;
+        border-radius: 3px;
+    } 
+    button:hover
+    {
+        transform: scale(1.03);
+    }
+    </style>
+    <section class="delete">
+    <form action="/index" method="POST"><button>HOME</button></form>
+    <h3>DELETION APPEAL</h3>
+    <form action="/delete_req" method="GET">
+        <div class="input">
+            <label for="id">ENTER ID OF RESTURANT YOU WOULD LIKE TO BE DELETED:</label>
+            <input type="text" id="id" name="id">
+            <br>
+            <label>PLEASE ENTER THE REASON WHY</label>
+            <input type="text" id="why" name="why">
+        </div>
+    <button type="submit">SUBMIT REQUEST</button>
+    </form>
+</section>

@@ -1,0 +1,105 @@
+<style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 2px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(odd) {
+      background-color: #e8aeae;
+    }
+    th{
+      background-color: #FFED86;
+    }
+    body{
+      background-color: #9BC86A;
+    }
+    button
+    {
+      margin: 2px;
+      padding: 6px;
+      border-radius: 3px;
+    }
+    button:hover
+    {
+        transform: scale(1.03);
+    }
+    label
+    {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+    </style>  
+
+<form action="/filter" method="GET">
+    <label for="fname">TYPE OF FOOD:</label>
+    <input type="text" id="foodlist" name="food">
+    <button>SUBMIT</button>
+</form>
+
+<form action="/filter3" method="GET">
+  <label for="fname">OUTCODE:</label>
+  <input type="text" id="foodlist" name="outcode">
+  <label for="fname">INCODE:</label>
+    <input type="text" id="foodlist" name="postcode">
+    <button>SUBMIT</button>
+</form>
+
+<form action="/filter2" method="GET">
+    <label for="fname">RATING:</label>
+    <input type="text" id="foodlist" name="food2">
+    <button>SUBMIT</button>
+</form>
+
+<form action="/filter4" method="GET">
+  <label for="fname">CITY:</label>
+  <input type="text" id="foodlist" name="city">
+  <button>SUBMIT</button>
+</form>
+
+<form action="/unique" method="GET">
+    <button>UNIQUE TYPES</button>
+</form>
+
+<form action="/unique2" method="GET">
+  <button>UNIQUE CITIES</button>
+</form>
+
+<form action="/index" method="GET">
+    <button>HOME</button>
+</form>
+<p><% filter %></p>
+<table>
+<tr>     
+      <th>ID</th> 
+      <th>URL</th>
+      <th>Address</th> 
+      <th>City</th>      
+      <th>Name</th>
+      <th>Outcode</th>
+      <th>Postcode</th>
+      <th>Rating</th>
+      <th>Type_of_food</th>
+    </tr> 
+<% filter.forEach(function(filter){ %>   
+    <tr>
+      <td><%= filter._id %></td>  
+      <td><%= filter.URL %></td>            
+      <td><%= filter.address %></td> 
+      <td><%= filter.city %></td>      
+      <td><%= filter.name %></td>
+      <td><%= filter.outcode %></td>
+      <td><%= filter.postcode %></td>
+      <td><%= filter.rating %></td>
+      <td><%= filter.type_of_food %></td>
+    </tr>  
+ <% }); %> 
+</table> 

@@ -1,0 +1,49 @@
+<style type="text/css">
+    body
+    {
+       background-image: linear-gradient(#d6ff99, #b3ff99, #99ffcc);
+    }
+    h3
+    {
+        font-family: Verdana, sans-serif;
+    }    
+    label
+    {
+        font-family: Helvetica, sans-serif;
+    }
+    input
+    {
+        padding: 2px;
+        margin: 2px;
+        display: flex;
+    
+    }   
+    button
+    {
+        margin: 3px;
+        padding: 5px;
+        border-radius: 3px;
+    } 
+    button:hover
+    {
+        transform: scale(1.03);
+    }
+    #feedback
+    {
+        padding:25px;
+    }
+    </style>
+    <section class="feedback">
+    <form action="/index" method="POST"><button>HOME</button></form>
+    <h3>FEEDBACK FORM!</h3>
+    <form action="/feedback" method="GET">
+        <div class="input">
+            <label for="id">ENTER THE ID OF THE RESTURANT:</label>
+            <input type="text" id="id" name="id">
+            <br>
+            <label for="id">WRITE YOUR REVIEW:</label>
+            <input type="text" id="feedback" name="feedback">
+        </div>
+    <button type="submit">SUBMIT</button>
+    </form>
+</section>

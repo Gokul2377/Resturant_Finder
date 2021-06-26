@@ -1,0 +1,52 @@
+<head>
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      td, th {
+        border: 2px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      
+      tr:nth-child(odd) {
+        background-color: #de7a7a;
+      }
+      th{
+        background-color: #FFED86;
+      }
+      body{
+        background-color: #9BC86A;
+      }
+      button
+      {
+        margin: 5px;
+        padding: 6px;
+        border-radius: 3px;
+      }
+      h1
+      {
+        text-align: center;
+      }
+      
+      </style>  
+  </head>
+  <body>
+  <form action="/admin" method="POST"><button>HOME</button></form>
+  <h1>DELETE APPEALS!</h1>
+  <table>
+      <tr>     
+        <th>ID</th> 
+        <th>Review</th>        
+      </tr>    
+      <% devices.forEach(function(device){ %>   
+      <tr>
+        <td><%= device._id %></td>  
+        <td><%= device.review %></td>        
+      </tr>  
+        <% }); %>      
+    </table>
+  </body>

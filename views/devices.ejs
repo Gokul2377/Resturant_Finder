@@ -1,0 +1,68 @@
+<head>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 2px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(odd) {
+      background-color: #9BC8C6;
+    }
+    th{
+      background-color: #FFED86;
+    }
+    body{
+      background-color: #9BC86A;
+    }
+    button
+    {
+      margin: 5px;
+      padding: 6px;
+      border-radius: 3px;
+    }
+    h1
+    {
+      text-align: center;
+    }
+    
+    </style>  
+</head>
+<body>
+<form action="/index" method="POST"><button>HOME</button></form>
+<h1>RESTURANTS!</h1>
+<table>
+    <tr>     
+      <th>ID</th> 
+      <th>URL</th>
+      <th>Address</th>   
+      <th>City</th>    
+      <th>Name</th>
+      <th>Outcode</th>
+      <th>Postcode</th>
+      <th>Rating</th>
+      <th>Type_of_food</th>
+      <th>Feedback</th>
+    </tr>    
+    <% devices.forEach(function(device){ %>   
+    <tr>
+      <td><%= device._id %></td>  
+      <td><%= device.URL %></td>            
+      <td><%= device.address %></td>
+      <td><%= device.city %></td>        
+      <td><%= device.name %></td>
+      <td><%= device.outcode %></td>
+      <td><%= device.postcode %></td>
+      <td><%= device.rating %></td>
+      <td><%= device.type_of_food %></td>
+      <td><%= device.feedback %></td>
+    </tr>  
+      <% }); %>      
+  </table>
+</body>

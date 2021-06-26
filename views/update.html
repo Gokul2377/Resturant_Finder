@@ -1,0 +1,77 @@
+<style type="text/css">
+    body
+    {
+        background-image: linear-gradient(to bottom , #b4ffb3 , #b3ffdf);
+    }
+    h3
+    {
+        font-family: Verdana, sans-serif;
+    }    
+    label
+    {
+        font-family: Helvetica, sans-serif;
+        margin: 3px;
+    }
+    input
+    {
+        padding: 2px;
+        margin: 5px;
+        display: flex;
+    
+    }   
+    button
+    {
+        margin: 5px;
+        padding: 6px;
+        border-radius: 3px;
+    } 
+    button:hover
+    {
+        transform: scale(1.03);
+    }
+    </style>
+    <section class="update">
+    <form action="/index" method="POST"><button>HOME</button></form>    
+        <h3>UPDATION</h3>        
+        <form action="/update" method="GET">
+            <div class="input">
+                <label for="id">ID</label>
+                <input type="text" id="id" name="id">
+            </div>
+            <br>
+            <br>
+            <div class="input">
+                <label for="title">URL</label>
+                <input type="text" id="address" name="url">
+            </div>
+            <div class="input">
+                <label for="title">ADDRESS</label>
+                <input type="text" id="address" name="address">
+            </div>
+            <div class="input">
+                <label for="title">CITY</label>
+                <input type="text" id="city" name="city">
+            </div>
+            <div class="input">
+                <label for="content">NAME</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="input">
+                <label for="title">OUTCODE</label>
+                <input type="text" id="address" name="outcode">
+            </div>
+            <div class="input">
+                <label for="title">INCODE</label>
+                <input type="text" id="address" name="postcode">
+            </div>
+            <div class="input">
+                <label for="author">RATING</label>
+                <input type="text" id="rating" name="rating">
+            </div>
+            <div class="input">
+                <label for="author">TYPE OF FOOD</label>
+                <input type="text" id="type_of_food" name="type">
+            </div>
+            <button type="submit">UPDATE</button>
+        </form>
+    </section>
